@@ -2,6 +2,7 @@
     max-width: 1000px; 
     /*Actual public goods site uses 1200px, but I'm assuming the desktop jpg was taken on a 1920 width, and 1000px looks more fitting*/
     margin: 0 auto;
+    padding-bottom: 50px;
 }
 /*UNIVERSAL STYLING START*/
 .padding-15{
@@ -135,10 +136,13 @@ bottom: 0px;
 }
 @media only screen and (max-width: 768px) {
     .desktop{
-        display: none;
+        display: none !important;
     }
     .mobile{
         display: block;
+    }
+    .container_wrapper{
+        padding-bottom: 0px;
     }
     .header{
         font-weight: 700;

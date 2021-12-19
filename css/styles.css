@@ -1,0 +1,157 @@
+.container_wrapper{
+    max-width: 1000px; 
+    /*Actual public goods site uses 1200px, but I'm assuming the desktop jpg was taken on a 1920 width, and 1000px looks more fitting*/
+    margin: 0 auto;
+}
+/*UNIVERSAL STYLING START*/
+.padding-15{
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+.margin-top-30{
+    margin-top: 30px;
+}
+.padding-none{
+    padding: 0px;
+}
+button.main-button{
+    background-color: #dc886b;
+    /* I would def want to make this a scss variable since it seems like this color will be reusable.
+    but since it'll be used only be used twice for this simple project, I won't*/
+    border: none;
+    padding: 15px 20px;
+    color: white;
+    width: 100%;
+    border-radius: 3px;
+    font-weight: 700;
+    
+}
+.header{
+    font-weight: 700;
+    font-size: 30px;
+}
+.text,p{
+    font-size: 16px;  
+}
+.subheader{
+    font-weight: 700;
+    font-size: 16px;
+    
+}
+.subheader_2{
+    font-weight: 900;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+ 
+}
+.sticky{
+    position: -webkit-sticky;
+position: sticky;
+bottom: 0px;
+}
+
+/*UNIVERSAL STYLING END*/
+
+/*sECTION SPECIFIC STYLING START*/
+.intro_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.intro_Wrapper .intro_text ul li{
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+.intro_wrapper .intro_img{
+    max-width:100%;
+    max-height:100%;
+    flex: 1;
+}
+.products_Wrapper{
+    margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+}
+.products_wrapper .products .product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.products_wrapper .products .product p{
+    text-align: center;
+}
+
+.products_wrapper .subheader_2{
+    text-align: center;
+}
+
+.approved_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+.approved_wrapper img{
+    max-width:100%;
+    max-height:100%;
+}
+.approved_wrapper ul{
+    list-style: none;
+    padding-left: 0px;
+}
+.approved_wrapper ul li:before{
+    content: '✓';
+    margin-right: 10px;
+}
+.approved_wrapper .approved_text{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.approved_wrapper .subheader,.subheader_2{
+    margin-bottom: 20px;
+}
+.approved_wrapper .approved_text > .subheader,.subheader_2,.text{
+    text-align: left;
+    width: 100%;
+}
+
+/*sECTION SPECIFIC STYLING END*/
+
+/*MEDIA QUERIES*/
+@media only screen and (min-width: 768px) {
+    .desktop{
+        display: block;
+    }
+    .mobile{
+        display: none;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+    .header{
+        font-weight: 700;
+        font-size: 25px;
+    }
+    .intro_wrapper{
+        flex-direction: column-reverse;
+    }
+    .approved_wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .approved_wrapper .approved_text{
+        padding: 20px 0px;
+    }
+}

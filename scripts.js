@@ -2,7 +2,7 @@ let timeout;
 let id = null;
 window.addEventListener('load', 
 function myFunction() {
-    timeout = setTimeout(moveModal, 500);
+    timeout = setTimeout(moveModal, 3000);
   }, false);
 
 
@@ -60,6 +60,10 @@ function getFacts() {
     function frame() {
       if (pos == 200) {
         clearInterval(id);
+        setTimeout(() => {
+          popup.style.visibility = "hidden";
+        }, 2000);
+    
       } else {
         pos++;
         popup.style.top = pos + 'vh';

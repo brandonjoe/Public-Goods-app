@@ -3,6 +3,7 @@
     /*Actual public goods site uses 1200px, but I'm assuming the desktop jpg was taken on a 1920 width, and 1000px looks more fitting*/
     margin: 0 auto;
     padding-bottom: 50px;
+    position: relative;
 }
 /*UNIVERSAL STYLING START*/
 .padding-15{
@@ -50,6 +51,16 @@ button.main-button{
 position: sticky;
 bottom: 0px;
 }
+.x{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.x:after{
+    display: inline-block;
+    content: "\00d7"; /* This will render the 'X' */
+    font-size: 40px;
+  }
 
 /*UNIVERSAL STYLING END*/
 
@@ -125,6 +136,53 @@ bottom: 0px;
 
 /*sECTION SPECIFIC STYLING END*/
 
+/*Popup section start*/
+#homepage_popup{
+    top: 200vh;
+
+    position: absolute;
+    visibility: hidden;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#homepage_popup .popup_content{
+    max-width: 800px;
+    width: 100%;
+    background: white;
+    display: flex;
+    align-items: stretch;
+}
+
+#homepage_popup .popup_content_text{
+    display: flex;
+    flex-direction: column;
+}
+#homepage_popup .popup_content_text button{
+    margin-top: auto;
+    margin-bottom: 50px;
+    border: none;
+    background: black;
+    color: white;
+    font-family: 'Oswald';
+    font-size: 30px;
+    padding: 5px 50px;
+    align-self: center;
+}
+#homepage_popup .popup_content_text button.disabled{
+   color: grey;
+    cursor: default;
+}
+#homepage_popup #popup_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#homepage_popup .popup_content img{
+    width: 100%;
+}
 /*MEDIA QUERIES*/
 @media only screen and (min-width: 768px) {
     .desktop{

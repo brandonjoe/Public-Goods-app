@@ -7,12 +7,16 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="css/styles.css" type="text/css">
+<script type="text/javascript" src="scripts.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+
    <div class="container_wrapper">
+     
+   
       <div class="clearfix" style="padding: 20px"></div>
       <div class="intro_wrapper">
          <div class="intro_text col-sm-5">
@@ -69,6 +73,22 @@
       </div>
       <button class="main-button mobile sticky">Claim your free offer</button>
    </div>
-   <script src="js/scripts.js"></script>
+   <div id="homepage_popup" class="">
+      <div class="popup_content">
+  
+            <div class="col-sm-6"> <img class="desktop" src="design/cat_facts_desktop.png" alt="cat high five"></div>
+            <div class="col-sm-6 popup_content_text">
+               <div class="x" onclick="closePopup()"></div>
+               <div id="popup_header">
+                  <h1 class="header">Cat Facts</h1>
+                
+               </div>
+               <div class="cat_facts_list"></div>
+               <button onclick="getFacts()" id="popupbutton" class="enabled">Click me</button>
+            </div>
+      </div>
+
+   </div>
 </body>
+
 </html>
